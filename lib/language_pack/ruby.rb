@@ -23,6 +23,7 @@ class LanguagePack::Ruby < LanguagePack::Base
   # @return [Boolean] true if it's a Ruby app
   def self.use?
     instrument "ruby.use" do
+      puts "Gemfile exist? #{File.exist?("skiwo/Gemfile")}"
       File.exist?("skiwo/Gemfile")
     end
   end
